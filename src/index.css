@@ -62,7 +62,7 @@ body {
 }
 
 .work.blastAnim .projects h1{
-    animation: blastOff .5s linear 1; 
+    animation: blastOff .5s cubic-bezier(0.4, 0, 0.2, 1) 1; 
 }
 
 .about{
@@ -97,7 +97,7 @@ body {
 }
 
 .about.blastAnim .me h1{
-    animation: blastOff .5s linear 1; 
+    animation: blastOff .5s cubic-bezier(0.4, 0, 0.2, 1) 1; 
 }
 
 
