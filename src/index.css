@@ -2,6 +2,7 @@
 
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 .container {
@@ -19,6 +20,8 @@ body {
     width: 100%;
     height: auto;
     display: block;
+    max-height: 100vh;
+    max-width: 100vw;
 }
 
 .banner h1{
@@ -29,46 +32,83 @@ body {
 
 .work{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
 }
 
-.work .team{
-    width: 49vw;
-    border: 1vw solid #fffb25;
-}
-
-.work .solo{
-    width: 49vw;
-    border: 1vw solid #5cf0b7;
-}
-
-.tabDiv{
-    position: relative;
-    height: 0px;
-    bottom: 2vw;
+.work .projects{
     display: flex;
-    justify-content: space-around;
-}
-
-.teamTab{
-    text-align: center;
-    height: 3vh;
-    width: 10vw;
-    font-family: 'Share Tech Mono';
-    border-radius: 10px 10px 0 0;
+    align-items: center;
+    width: 94%;
+    height: 13vw;
     background-color: #fffb25;
-    padding-top: 5px;
-    font-size: 1.1em;
+    -ms-transform: skewX(-18deg);
+    -webkit-transform: skewX(-18deg);
+    transform: skewX(-18deg);
+    border-right: 1px solid rgba(0,0,0,.1);
 }
 
-.soloTab{
-    text-align: center;
-    height: 3vh;
-    width: 10vw;
+.work .projects h1{
+    font-size: 9vw;
+    font-style: italic;
     font-family: 'Share Tech Mono';
-    border-radius: 10px 10px 0 0;
+    margin: 0;
+    -ms-transform: skewX(-15deg);
+    -webkit-transform: skewX(-15deg);
+    transform: skewX(-15deg);
+    letter-spacing: 1vw;
+    padding-left: 2vw;
+    position: relative;
+    pointer-events: none;
+}
+
+.work.blastAnim .projects h1{
+    animation: blastOff .5s linear 1; 
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+}
+
+.about .me{
+    display: flex;
+    align-items: center;
+    width: 94%;
+    height: 13vw;
     background-color: #5cf0b7;
-    padding-top: 5px;
-    font-size: 1.1em;
+    -ms-transform: skewX(18deg);
+    -webkit-transform: skewX(18deg);
+    transform: skewX(18deg);
+    border-right: 1px solid rgba(0,0,0,.2);
+}
+
+.about .me h1{
+    font-size: 9vw;
+    font-style: italic;
+    font-family: 'Share Tech Mono';
+    margin: 0;
+    -ms-transform: skewX(15deg);
+    -webkit-transform: skewX(15deg);
+    transform: skewX(15deg);
+    letter-spacing: 1vw;
+    padding-left: 2vw;
+    position: relative;
+    pointer-events: none;
+}
+
+.about.blastAnim .me h1{
+    animation: blastOff .5s linear 1; 
+}
+
+
+@keyframes blastOff {
+    0% {
+        left: 0px;
+    }
+    50%{
+        left: 3500px;
+    }
+    100% {
+        left: 0px;
+    }
 }

@@ -1,0 +1,2 @@
+green: #5cf0b7
+yellow: #fffb25
