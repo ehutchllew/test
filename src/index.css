@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono'); 
+
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.banner {
+    text-align: center;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.banner h1{
+    font-size: 5em;
+    font-family: 'Share Tech Mono';
+    -webkit-text-stroke: .1px white;
+}
+
+.work{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.work .team{
+    width: 49vw;
+    border: 1vw solid #fffb25;
+}
+
+.work .solo{
+    width: 49vw;
+    border: 1vw solid #5cf0b7;
+}
+
+.tabDiv{
+    position: relative;
+    height: 0px;
+    bottom: 2vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.teamTab{
+    text-align: center;
+    height: 3vh;
+    width: 10vw;
+    font-family: 'Share Tech Mono';
+    border-radius: 10px 10px 0 0;
+    background-color: #fffb25;
+    padding-top: 5px;
+    font-size: 1.1em;
+}
+
+.soloTab{
+    text-align: center;
+    height: 3vh;
+    width: 10vw;
+    font-family: 'Share Tech Mono';
+    border-radius: 10px 10px 0 0;
+    background-color: #5cf0b7;
+    padding-top: 5px;
+    font-size: 1.1em;
+}
