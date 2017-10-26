@@ -18,4 +18,20 @@ $(document).ready(function(){
     $(this).addClass('blastAnim');
   })
 
+  $('.tech').on('animationend webkitAnimationEnd mozAnimationEnd', function () {
+    $(this).removeClass('blastAnim');
+  })
+
+  $('.tech').on('mouseover', function () {
+    $(this).addClass('blastAnim');
+  })
+
+  $('.contact').on('animationend webkitAnimationEnd mozAnimationEnd', function () {
+    $(this).removeClass('blastAnim');
+  })
+
+  $('.contact').on('mouseover', function () {
+    $(this).addClass('blastAnim');
+  })
+
 });

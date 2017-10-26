@@ -30,12 +30,12 @@ body {
     -webkit-text-stroke: .1px white;
 }
 
-.work{
+.about{
     display: flex;
     justify-content: center;
 }
 
-.work .projects{
+.about .me{
     display: flex;
     align-items: center;
     width: 94%;
@@ -44,10 +44,10 @@ body {
     -ms-transform: skewX(-18deg);
     -webkit-transform: skewX(-18deg);
     transform: skewX(-18deg);
-    border-right: 1px solid rgba(0,0,0,.1);
+    box-shadow: 0.5vw 0 55px 0 rgba(0,0,0,.2);
 }
 
-.work .projects h1{
+.about .me h1{
     font-size: 9vw;
     font-style: italic;
     font-family: 'Share Tech Mono';
@@ -61,16 +61,16 @@ body {
     pointer-events: none;
 }
 
-.work.blastAnim .projects h1{
+.about.blastAnim .me h1{
     animation: blastOff .5s cubic-bezier(0.4, 0, 0.2, 1) 1; 
 }
 
-.about{
+.work{
     display: flex;
     justify-content: center;
 }
 
-.about .me{
+.work .projects{
     display: flex;
     align-items: center;
     width: 94%;
@@ -79,10 +79,10 @@ body {
     -ms-transform: skewX(18deg);
     -webkit-transform: skewX(18deg);
     transform: skewX(18deg);
-    border-right: 1px solid rgba(0,0,0,.2);
+    box-shadow: 0.5vw 0 55px 0 rgba(0,0,0,.2);
 }
 
-.about .me h1{
+.work .projects h1{
     font-size: 9vw;
     font-style: italic;
     font-family: 'Share Tech Mono';
@@ -96,7 +96,77 @@ body {
     pointer-events: none;
 }
 
-.about.blastAnim .me h1{
+.work.blastAnim .projects h1{
+    animation: blastOff .5s cubic-bezier(0.4, 0, 0.2, 1) 1; 
+}
+
+.tech{
+    display: flex;
+    justify-content: center;
+}
+
+.tech .nology{
+    display: flex;
+    align-items: center;
+    width: 94%;
+    height: 13vw;
+    background-color: #f05c70;
+    -ms-transform: skewX(-18deg);
+    -webkit-transform: skewX(-18deg);
+    transform: skewX(-18deg);
+    box-shadow: 0.5vw 0 55px 0 rgba(0,0,0,.2);
+}
+
+.tech .nology h1{
+    font-size: 9vw;
+    font-style: italic;
+    font-family: 'Share Tech Mono';
+    margin: 0;
+    -ms-transform: skewX(-15deg);
+    -webkit-transform: skewX(-15deg);
+    transform: skewX(-15deg);
+    letter-spacing: 1vw;
+    padding-left: 2vw;
+    position: relative;
+    pointer-events: none;
+}
+
+.tech.blastAnim .nology h1{
+    animation: blastOff .5s cubic-bezier(0.4, 0, 0.2, 1) 1; 
+}
+
+.contact{
+    display: flex;
+    justify-content: center;
+}
+
+.contact .info{
+    display: flex;
+    align-items: center;
+    width: 94%;
+    height: 13vw;
+    background-color: #5cb5f0;
+    -ms-transform: skewX(18deg);
+    -webkit-transform: skewX(18deg);
+    transform: skewX(18deg);
+    box-shadow: 0.5vw 0 55px 0 rgba(0,0,0,.2);
+}
+
+.contact .info h1{
+    font-size: 9vw;
+    font-style: italic;
+    font-family: 'Share Tech Mono';
+    margin: 0;
+    -ms-transform: skewX(15deg);
+    -webkit-transform: skewX(15deg);
+    transform: skewX(15deg);
+    letter-spacing: 1vw;
+    padding-left: 2vw;
+    position: relative;
+    pointer-events: none;
+}
+
+.contact.blastAnim .info h1{
     animation: blastOff .5s cubic-bezier(0.4, 0, 0.2, 1) 1; 
 }
 
