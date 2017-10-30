@@ -73,37 +73,17 @@
 var $ = __webpack_require__(1);
 
 $(document).ready(function () {
+  var $main = $('.main');
+  var $hamburger = $('.hamburger');
 
-  $('.work').on('animationend webkitAnimationEnd mozAnimationEnd', function () {
-    $(this).removeClass('blastAnim');
+  $main.on('mouseover', function () {
+    $(this).addClass('blastAnim').on('animationend webkitAnimationEnd mozAnimationEnd', function () {
+      $(this).removeClass('blastAnim');
+    });
   });
 
-  $('.work').on('mouseover', function () {
-    $(this).addClass('blastAnim');
-  });
-
-  $('.about').on('animationend webkitAnimationEnd mozAnimationEnd', function () {
-    $(this).removeClass('blastAnim');
-  });
-
-  $('.about').on('mouseover', function () {
-    $(this).addClass('blastAnim');
-  });
-
-  $('.tech').on('animationend webkitAnimationEnd mozAnimationEnd', function () {
-    $(this).removeClass('blastAnim');
-  });
-
-  $('.tech').on('mouseover', function () {
-    $(this).addClass('blastAnim');
-  });
-
-  $('.contact').on('animationend webkitAnimationEnd mozAnimationEnd', function () {
-    $(this).removeClass('blastAnim');
-  });
-
-  $('.contact').on('mouseover', function () {
-    $(this).addClass('blastAnim');
+  $hamburger.on('click', function () {
+    $hamburger.find('.filling').toggleClass('expand');
   });
 });
 
