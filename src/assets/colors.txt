@@ -1,2 +1,4 @@
-green: #5cf0b7
 yellow: #fffb25
+green: #5cf0b7
+red: #f05c70
+blue: #5cb5f0
