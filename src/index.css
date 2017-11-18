@@ -32,25 +32,23 @@ body {
 
 .main{
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
 }
 
-.main div:nth-child(1){
+.main .sub{
     display: flex;
     align-items: center;
     width: 75.5vw;
     height: 8vh;
     margin-left: 1vw;
     box-shadow: 0.5vw 0 55px 0 rgba(0,0,0,.2);   
-}
-
-.main div{
     -ms-transform: skewX(-15deg);
     -webkit-transform: skewX(-15deg);
     transform: skewX(-15deg);
 }
 
-.main div:nth-child(1) h1{
+.main .sub h1{
     font-size: 4.5vh;
     font-style: italic;
     font-family: 'Share Tech Mono';
@@ -67,6 +65,45 @@ body {
 
 .about .me{
     background-color: #fffb25;
+}
+
+.drop-container {
+    border-top: 0 solid #fffb25;
+    border-bottom: 0 solid #fffb25;
+    height: auto;
+    transition: 1s ease-in-out;
+}
+
+/* .drop-container.dropdown {
+    border-top: 1vh solid #fffb25;
+    border-bottom: 1vh solid #fffb25;
+} */
+
+.drop-container .rowz{
+    display: flex;
+    justify-content: center;
+    transition: 1s ease-in-out;
+}
+
+.drop-container .rowz.dropdown{
+    margin: 1vw 0;
+}
+
+.drop-container .item{
+    display: flex;
+    height: 0;
+    width: 45vw;
+    background-color: green;
+    transition: 1s ease-in-out;
+}
+
+.drop-container .item.dropdown{
+    height: 20vh;
+    margin: 0 1vw;
+}
+
+.drop-container .item:nth-child(2){
+    background-color: red;
 }
 
 .work .projects{
