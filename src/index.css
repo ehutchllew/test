@@ -93,17 +93,13 @@ body {
     display: flex;
     height: 0;
     width: 45vw;
-    background-color: green;
+    background-color: rgba(0,0,0,.85);
     transition: 500ms ease-in-out;
 }
 
 .drop-container .item.dropdown{
     height: 20vh;
     margin: 0 1vw;
-}
-
-.drop-container .item:nth-child(2){
-    background-color: red;
 }
 
 .work .projects{
