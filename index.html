@@ -16,14 +16,10 @@
         </section>
 
         <section class='about main'>
-            <div class='me sub'>
+            <div id='me' class='me sub'>
                 <h1>ABOUT ME</h1>
             </div>
             <div class='drop-container'>
-                <span class='rowz'>
-                    <span class='item'></span>
-                    <span class='item'></span>
-                </span>
                 <span class='rowz'>
                     <span class='item'></span>
                     <span class='item'></span>
@@ -32,12 +28,14 @@
         </section>
 
         <section class='work main'>
-            <div class='projects sub'>
+            <div id='projects' class='projects sub'>
                 <h1>PROJECTS</h1>
             </div>
             <div class='drop-container'>
                 <span class='rowz'>
-                    <span class='item'></span>
+                    <a href='./src/projects/anthemMedicaid/anthemMedicaid.html'>
+                        <span class='item'></span>
+                    </a>
                     <span class='item'></span>
                 </span>
                 <span class='rowz'>
@@ -48,7 +46,7 @@
         </section>
 
         <section class='tech main'>
-            <div class='nology sub'>
+            <div id='nology' class='nology sub'>
                 <h1>TECHNOLOGY</h1>
             </div>
             <div class='drop-container'>
@@ -64,7 +62,7 @@
         </section>
 
         <section class='contact main'>
-            <div class='info sub'>
+            <div id='info' class='info sub'>
                 <h1>CONTACT INFO</h1>
             </div>
             <div class='drop-container'>
@@ -87,14 +85,14 @@
         </section>
 
         <section class='theMenu'>
-            <div><a href='#about'>ABOUT ME</a></div>
-            <div><a href='#about'>PROJECTS</a></div>
-            <div><a href='#about'>TECHNOLOGY</a></div>
-            <div><a href='#about'>CONTACT INFO</a></div>
+            <div name='me'>ABOUT ME</div>
+            <div name='projects'>PROJECTS</div>
+            <div name='nology'>TECHNOLOGY</div>
+            <div name='info'>CONTACT INFO</div>
         </section>
 
     </div>
 
-    <script src="./bundle.js"></script>
+    <script src="./src/bundle/index.bundle.js"></script>
 </body>
 </html>

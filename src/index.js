@@ -51,6 +51,10 @@ $(document).ready(function(){
           $theMenu.toggleClass('expand');
         });
 
+        $theMenu.find('div').on('click', function(){
+          console.log($(this).attr('name')); //use this to trigger a .click() event on the id's of the same name
+        });
+
       },
 
       dropdownMenus: function(){
@@ -67,7 +71,7 @@ $(document).ready(function(){
           $parentElement.find('.item').toggleClass('dropdown');
 
           if($dropContainer.hasClass('dropdown'))
-            $('html, body').animate({ scrollTop: $parentElement.offset().top }, 1100); 
+            $('html, body').animate({ scrollTop: $parentElement.offset().top }, 550); 
         });
 
       },

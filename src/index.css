@@ -71,8 +71,7 @@ body {
     border-top: 0 solid #fffb25;
     border-bottom: 0 solid #fffb25;
     height: auto;
-    transition: 1s ease-in-out;
-    pointer-events: none;
+    transition: 500ms ease-in-out;
 }
 
 /* .drop-container.dropdown {
@@ -83,7 +82,7 @@ body {
 .drop-container .rowz{
     display: flex;
     justify-content: center;
-    transition: 1s ease-in-out;
+    transition: 500ms ease-in-out;
 }
 
 .drop-container .rowz.dropdown{
@@ -95,7 +94,7 @@ body {
     height: 0;
     width: 45vw;
     background-color: green;
-    transition: 1s ease-in-out;
+    transition: 500ms ease-in-out;
 }
 
 .drop-container .item.dropdown{
@@ -203,27 +202,25 @@ body {
     padding: 2px 0 2px 0;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-}
-
-.theMenu div a{
     text-decoration: none;
     font-family: 'Share Tech Mono';
     font-size: 2vh;
 }
 
-.theMenu div:nth-child(1) a{
+
+.theMenu div[name='me']{
     color: #fffb25;
 }
 
-.theMenu div:nth-child(2) a{
+.theMenu div[name='projects']{
     color: #5cf0b7;
 }
 
-.theMenu div:nth-child(3) a{
+.theMenu div[name='nology']{
     color: #f05c70;
 }
 
-.theMenu div:nth-child(4) a{
+.theMenu div[name='info']{
     color: #5cb5f0;
 }
 
