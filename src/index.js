@@ -16,7 +16,6 @@ $(document).ready(function(){
       },
 
       animationBlast: function(){
-
         var mobileCheck = /Android|iPhone|iPad/i;
         var deviceType = navigator.userAgent;
         var $main = $('.main');
@@ -51,14 +50,19 @@ $(document).ready(function(){
           $theMenu.toggleClass('expand');
         });
 
+        //Needs refactoring, try calling dropDownMenus() here and only call hamburger in init, not both.
         $theMenu.find('div').on('click', function(){
-          console.log($(this).attr('name')); //use this to trigger a .click() event on the id's of the same name
+          let menuId = $(this).attr('name');
+
+          if($(`.main #${menuId}`).parent().find('.drop-container').hasClass('dropdown'))
+            $('html, body').animate({ scrollTop: $(`.main #${menuId}`).parent().offset().top }, 550);
+          else
+            $(`.main #${menuId}`).click();
         });
 
       },
 
       dropdownMenus: function(){
-
         var $mainSub = $('.main .sub');
 
         console.log($mainSub);
