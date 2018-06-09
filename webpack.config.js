@@ -1,8 +1,14 @@
+var path = require('path');
+
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        index: './src/index.js',
+        antmBCBS: './src/projects/anthemMedicaid/anthemMedicaid.js',
+        oneAntm: './src/projects/oneAnthem/oneAnthem.js'
+    },
     output: {
-        path: __dirname,
-        filename: 'bundle.js'
+        path: path.join(__dirname, 'src', 'bundle'),
+        filename: '[name].bundle.js'
     },
     module: {
         loaders: [

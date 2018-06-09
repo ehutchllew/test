@@ -59,7 +59,7 @@ body {
     pointer-events: none;
 }
 
-.main.blastAnim div h1{
+.main .sub.blastAnim h1{
     animation: blastOff .5s cubic-bezier(0.4, 0, 0.2, 1) 1;
 }
 
@@ -71,7 +71,7 @@ body {
     border-top: 0 solid #fffb25;
     border-bottom: 0 solid #fffb25;
     height: auto;
-    transition: 1s ease-in-out;
+    transition: 500ms ease-in-out;
 }
 
 /* .drop-container.dropdown {
@@ -82,7 +82,7 @@ body {
 .drop-container .rowz{
     display: flex;
     justify-content: center;
-    transition: 1s ease-in-out;
+    transition: 500ms ease-in-out;
 }
 
 .drop-container .rowz.dropdown{
@@ -93,17 +93,13 @@ body {
     display: flex;
     height: 0;
     width: 45vw;
-    background-color: green;
-    transition: 1s ease-in-out;
+    background-color: rgba(0,0,0,.85);
+    transition: 500ms ease-in-out;
 }
 
 .drop-container .item.dropdown{
     height: 20vh;
     margin: 0 1vw;
-}
-
-.drop-container .item:nth-child(2){
-    background-color: red;
 }
 
 .work .projects{
@@ -184,7 +180,7 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 20vw;
+    height: 70vh;
     width: 21.5vw;
     top: 0.75vw;
     right: -21.5vw;
@@ -196,27 +192,31 @@ body {
 
 .theMenu div{
     text-align: center;
-}
-
-.theMenu div a{
+    width: 100%;
+    height: 4vh;
+    background-color: rgba(0,0,0,.7);
+    padding: 2px 0 2px 0;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
     text-decoration: none;
     font-family: 'Share Tech Mono';
     font-size: 2vh;
 }
 
-.theMenu div:nth-child(1) a{
+
+.theMenu div[name='me']{
     color: #fffb25;
 }
 
-.theMenu div:nth-child(2) a{
+.theMenu div[name='projects']{
     color: #5cf0b7;
 }
 
-.theMenu div:nth-child(3) a{
+.theMenu div[name='nology']{
     color: #f05c70;
 }
 
-.theMenu div:nth-child(4) a{
+.theMenu div[name='info']{
     color: #5cb5f0;
 }
 
@@ -238,12 +238,12 @@ body {
 }
 
 @media only screen and (max-width: 1024px){
-    .main div:nth-child(1){
+    .main .sub{
         height: 6vh;
         margin-left: 2vw;
     }
 
-    .main div:nth-child(1) h1{
+    .main .sub h1{
         font-size: 3vh;
     }
 
@@ -286,5 +286,36 @@ body {
 
     .theMenu.expand{
         transform: translate(-21vw, 0);
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 790px) {
+    .banner img{
+        height: 100vh;
+    }
+
+    .main .sub{
+        height: 12vh;
+    }
+
+    .main .sub h1{
+        font-size: 6vh;
+    }
+
+    .drop-container .item.dropdown{
+        height: 35vh;
+    }
+
+    .hamburger{
+        height: 6vh;
+        width: 6vh;
+    }
+
+    .theMenu{
+        height: 90vh;
+    }
+
+    .theMenu div a{
+        font-size: 4vh;
     }
 }

@@ -16,11 +16,15 @@ $(document).ready(function(){
       },
 
       animationBlast: function(){
+<<<<<<< HEAD
         () => console.log('hi');
 
+=======
+>>>>>>> 024ccfa89e22fd2efcd47be68b3d1c4e37d5c520
         var mobileCheck = /Android|iPhone|iPad/i;
         var deviceType = navigator.userAgent;
         var $main = $('.main');
+        var $mainSub = $('.main .sub');
         console.log(mobileCheck.exec(deviceType));
       
         if(mobileCheck.test(deviceType)){
@@ -30,7 +34,7 @@ $(document).ready(function(){
             });
           });
         } else {
-          $main.on('mouseover', function(){
+          $mainSub.on('mouseover', function(){
             $(this).addClass('blastAnim').on('animationend webkitAnimationEnd mozAnimationEnd', function () {
               $(this).removeClass('blastAnim');
             });
@@ -51,21 +55,32 @@ $(document).ready(function(){
           $theMenu.toggleClass('expand');
         });
 
+        //Needs refactoring, try calling dropDownMenus() here and only call hamburger in init, not both.
+        $theMenu.find('div').on('click', function(){
+          let menuId = $(this).attr('name');
+
+          if($(`.main #${menuId}`).parent().find('.drop-container').hasClass('dropdown'))
+            $('html, body').animate({ scrollTop: $(`.main #${menuId}`).parent().offset().top }, 550);
+          else
+            $(`.main #${menuId}`).click();
+        });
+
       },
 
       dropdownMenus: function(){
-
         var $mainSub = $('.main .sub');
-        var $dropContainer = $('.drop-container');
 
         console.log($mainSub);
         $mainSub.on('click', function(){
-          var $parentElement = $(this).parent();
-          $parentElement.find('.drop-container').toggleClass('dropdown');
+          let $parentElement = $(this).parent();
+          let $dropContainer = $parentElement.find('.drop-container');
+
+          $dropContainer.toggleClass('dropdown');
           $parentElement.find('.rowz').toggleClass('dropdown');
           $parentElement.find('.item').toggleClass('dropdown');
 
-          $parentElement.animate({ scrollTop: $dropContainer.offset().top }, 1000); //fix this.
+          if($dropContainer.hasClass('dropdown'))
+            $('html, body').animate({ scrollTop: $parentElement.offset().top }, 550); 
         });
 
       },
