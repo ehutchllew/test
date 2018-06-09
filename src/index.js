@@ -16,6 +16,7 @@ $(document).ready(function(){
       },
 
       animationBlast: function(){
+        () => console.log('hi');
 
         var mobileCheck = /Android|iPhone|iPad/i;
         var deviceType = navigator.userAgent;
